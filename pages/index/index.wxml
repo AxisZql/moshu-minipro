@@ -1,0 +1,14 @@
+
+	<!-- 功能栏 -->
+	<view class="hmly-title-bar">
+		<view class="hmly-item-title {{index == currentIndex ? 'hmly-active' : ' '}}" data-index="{{index}}"
+			bindtap="checkItem" wx:for="{{content}}" wx:key="index">
+			{{item.text}}
+		</view>
+  </view>
+  <view class="hmly-title-bar">
+		<view class="hmly-item-title {{index == currentIndex ? 'hmly-active' : ' '}}" data-index="{{index}}"
+			bindtap="checkItem" wx:for="{{content}}" wx:key="index">
+			{{item.text}}
+		</view>
+	</view>

@@ -1,0 +1,170 @@
+<!--6个计算器-->
+<view class="hmly-nav">
+	<block>
+		<view class="hmly-nav-item" bindtap="{{item.events}}" wx:for="{{navList}}" wx:key="index">
+			<image class="hmly-nav-icon" src="{{item.icon}}" mode="widthFix" lazy-load="false"></image>
+			<text class="hmly-nav-text">{{item.text}}</text>
+		</view>
+	</block>
+</view>
+<view class="hmly-nav">
+  <block>
+     <view class="hmly-nav-item" bindtap="{{item.events}}" wx:for="{{nacList}}" wx:key="index">
+			 <image class="hmly-nav-icon" src="{{item.icon}}" mode="widthFix" lazy-load="false"></image>
+			 <text class="hmly-nav-text">{{item.text}}</text>
+			 
+		 </view>
+  </block>
+</view>
+
+<view class="input-ans">
+<!--中间部分-->
+
+<view class="bds-input" >
+	<!-- 这个标题可以根据响应事件动态改变 -->
+	<text class="biaoti">{{js_title}}</text>
+<form bindsubmit="submit">
+	<!-- 表达式输入框-->
+	<view class="view-contain-ti" wx:if="{{postvisual.bdjf}}">
+	<text class="text-ti">表达式</text>
+	<input class="input1" maxlength="-1" bindinput="inputFunction1"></input>
+</view>
+<!-- 表达式输入框-->
+<view class="view-contain-ti" wx:if="{{postvisual.hsqd}}">
+	<text class="text-ti">表达式</text>
+	<input class="input1" maxlength="-1" bindinput="inputFunction2"></input>
+</view>
+<!-- 表达式输入框-->
+<view class="view-contain-ti" wx:if="{{postvisual.ysfj}}">
+	<text class="text-ti">表达式</text>
+	<input class="input1" maxlength="-1" bindinput="inputFunction3"></input>
+</view>
+<!-- 表达式输入框-->
+<view class="view-contain-ti" wx:if="{{postvisual.djf}}">
+	<text class="text-ti">表达式</text>
+	<input class="input1" maxlength="-1" bindinput="inputFunction4"></input>
+</view>
+<!-- 表达式输入框-->
+<view class="view-contain-ti" wx:if="{{postvisual.jx}}">
+	<text class="text-ti">表达式</text>
+	<input class="input1" maxlength="-1" bindinput="inputFunction5"></input>
+</view>
+<!-- 表达式输入框-->
+<view class="view-contain-ti" wx:if="{{postvisual.hj}}">
+	<text class="text-ti">表达式</text>
+	<input class="input1" maxlength="-1" bindinput="inputFunction6"></input>
+</view>
+<!-- 不定积分自变量输入框 -->
+<view class="view-contain-ti2" wx:if="{{postvisual.bdjf}}">
+	<text class="text-ti" >自变量</text>
+	<input class="input1" bindinput="inputvar1"></input>
+</view>
+<!-- 不定积分数据提交按钮 -->
+<button class="btn-js" type="default" 	size="mini" wx:if="{{postvisual.bdjf}}" bindtap="submit1">
+    <view>计算</view>
+ </button>
+
+<!-- 函数求导自变量 -->
+<!-- 大盒子 -->
+<view class="hsqd-part2">
+<view class="view-contain-ti2-hsqd" wx:if="{{postvisual.hsqd}}">
+	<text class="text-ti">自变量</text>
+	<input class="input1" bindinput="inputvar2"></input>
+</view>
+<!-- 函数求导阶数 -->
+<view class="view-contain-ti2-hsqd" wx:if="{{postvisual.hsqd}}">
+	<text class="text-ti">阶数</text>
+	<input class="input1" bindinput="inputorder"></input>
+</view>
+<!-- 函数求导数据提交按钮 -->
+<button class="btn-js-hsqd" type="default" 	size="mini"  wx:if="{{postvisual.hsqd}}" bindtap="submit2">
+    <view>计算</view>
+ </button>
+</view>
+
+<!-- 因式分解大盒子 -->
+<view class="ysfj-part2">
+	<button  type="default" size="mini" wx:if="{{postvisual.ysfj}}" bindtap="submit3">
+		<view>计算</view>
+	</button>
+</view>
+
+<!-- 定积分 -->
+<!-- 大盒子 -->
+<view class="djf-part2">
+<view class="view-contain-ti2-djf" wx:if="{{postvisual.djf}}">
+	<text class="text-ti">自变量</text>
+	<input class="input1" bindinput="inputvar4"></input>
+</view>
+<!-- 函数求导阶数 -->
+<view class="view-contain-ti2-djf" wx:if="{{postvisual.djf}}">
+	<text class="text-ti">起始点</text>
+	<input class="input1" bindinput="inputa"></input>
+</view>
+<view class="view-contain-ti2-djf" wx:if="{{postvisual.djf}}">
+	<text class="text-ti">终止点</text>
+	<input class="input1" bindinput="inputb"></input>
+</view>
+
+<!-- 定积分数据提交按钮 -->
+<button class="btn-js-djf" type="default" 	size="mini"  wx:if="{{postvisual.djf}}" bindtap="submit4">
+    <view>计算</view>
+ </button>
+</view>
+
+<!-- 极限计算，极限类型选择 -->
+<!-- 大盒子 -->
+<view class="jx-part2">
+<view class="view-contain-ti2-jx" wx:if="{{postvisual.jx}}">
+	<text class="text-ti">自变量</text>
+	<input class="input1" bindinput="inputvar5"></input>
+</view>
+<!-- 函数求导阶数 -->
+<view class="view-contain-ti2-jx" wx:if="{{postvisual.jx}}">
+	<text class="text-ti">展开点</text>
+	<input class="input1" bindinput="inputval"></input>
+</view>
+<view class="view-contain-ti2-jx" wx:if="{{postvisual.jx}}">
+	<text class="text-ti">极限类型</text>
+	<input class="input1" bindinput="inputlimiType"></input>
+</view>
+<button class="btn-js-jx" type="default" 	size="mini"  wx:if="{{postvisual.jx}}" bindtap="submit5"> 
+    <view>计算</view>
+ </button>
+</view>
+<!-- 表达式化简 -->
+<view class="hj-part2">
+	<button  type="default" size="mini" wx:if="{{postvisual.hj}}" bindtap="submit6">
+		<view>计算</view>
+	</button>
+</view>
+</form>
+
+</view>	
+</view>
+
+<!-- 先判断是否有计算结果，有了才给显示 -->
+<view class="input-ans" wx:if="{{true}}">
+<!--最后部分-->
+<view class="js-ans" readonly="readonly" wx:if="{{hasAns}}">
+	<view class="result-title" >计算结果</view>
+	<view class="result1">
+		<!-- <image src={{pathurl}}></image> -->
+		<scroll-view scroll-x="true" style=" width: 600rpx; height: 320rpx;" class="scroll_display">
+			<image class="ans-img" style="width:{{result_width}}%" src="{{pathurl}}"> </image>
+		</scroll-view>
+		
+
+
+	</view>
+	<view class="fd-img">
+	 <button type="default" size="mini" bindtap="fd_img">
+		 <view>放大</view>
+	 </button>
+	 <button type="default" size="mini" bindtap="sx_img">
+		 <view>缩小</view>
+	 </button>
+ </view>
+</view>
+
+</view>

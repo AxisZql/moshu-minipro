@@ -1,0 +1,257 @@
+/* pags/home/home.wxss */
+
+
+.hmly-nav {
+	width: 90%;
+	height: 132rpx;
+	display: flex; /*flex属性值，自动调整各个子组件的宽度，一行排不开会被压缩*/
+	border-radius: 4px;/*圆角边框*/   
+	justify-content: space-between;/* 均匀排列每个元素 首个元素放置于起点，末尾元素放置于终点 */
+	align-items: center;/*占据空间方位的比例*/
+	align-content: center;	 /* 将项目放置在中点 */
+  margin: 0rpx auto; /*页面左右空白自适应并且相等 */
+	margin-top: 30rpx;/*外边距*/
+
+	
+	/*background-color: white;
+	box-shadow: 0px 4px 16px 0px rgb(243, 244, 246);*/ 
+}
+
+/*图标文字样式*/
+.hmly-nav-item {
+	width: 100rpx;
+	font-size: 20rpx;/*字体大小*/
+	text-align: center;
+	text-size-adjust:auto ;
+	line-height: 35rpx;
+	color: #aaa;
+}
+
+.hmly-nav-icon {
+	width: 84rpx;
+	height: 84rpx;
+}
+.hmly-swiper-box-item {
+	height: 350rpx;
+}
+
+.hmly-no-content {
+	width: 90%;
+	height: auto;
+	margin: 0rpx auto;
+	margin-top: 100rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+/*输入端和结果端*/
+.input-ans{
+	 width:100%;
+	 height:100%;
+
+	 background-color: rgb(243, 244, 246);
+	 display: flex;
+	 justify-content: start;
+}
+
+.bds-input{
+	width:100%;
+	height:270rpx;
+	margin: 0rpx auto;
+	margin-top: 30rpx;/*上边距*/
+	margin-left: 15rpx;
+	margin-right:15rpx;
+	color:black;/*字体颜色*/
+	background-color: white;
+	box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.06); 
+	border-radius: 15px;
+	align-items: center;
+	align-content: center;
+}
+.js-ans{
+	width:100%;
+	height:600rpx;
+	margin: 0rpx auto;
+	margin-top: 30rpx;/*上边距*/
+	margin-left: 15rpx;
+	margin-right:15rpx;
+	color:black;/*字体颜色*/
+	background-color: white;
+	box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.06); 
+	border-radius: 15px;
+	align-items: center;
+	align-content: center;
+}
+
+
+
+/* 输入框 */
+.view-contain-ti {
+  display: flex;
+  height: 65rpx;
+  margin: 15px;
+  border: 3rpx solid #faca82;
+  border-radius: 10rpx;
+}
+
+.text-ti {
+  position: absolute;
+  font-size: 12px;
+  background: white;
+  margin: -10px 0 0 10px;
+  padding: 0 5px;
+  color: rgb(144, 147, 167);
+}
+
+.input1 {
+	margin:  auto 10px;
+	/* width: 276rpx; */
+}
+
+.view-contain-ti2 {
+	/* display: flex; */
+	position: relative;
+	height: 60rpx;
+	width: 150rpx;
+	left: 120rpx;
+	
+  border: 3rpx solid #faca82;
+  border-radius: 10rpx;
+}
+
+.view-contain-ti2-hsqd {
+	display: flex;
+	/* position: relative; */
+	height: 60rpx;
+	width: 150rpx;
+	/* left: 120rpx; */
+  margin-left: 50rpx;
+	
+  border: 3rpx solid #faca82;
+  border-radius: 10rpx;
+}
+/* 定积分输入框 */
+.view-contain-ti2-djf {
+	display: flex;
+	/* position: relative; */
+	height: 60rpx;
+	width: 130rpx;
+	/* left: 120rpx; */
+  margin-left: 33rpx;
+	
+  border: 3rpx solid #faca82;
+  border-radius: 10rpx;
+}
+/* 极限输入框 */
+/* 定积分输入框 */
+.view-contain-ti2-jx {
+	display: flex;
+	/* position: relative; */
+	height: 60rpx;
+	width: 130rpx;
+	/* left: 120rpx; */
+  margin-left: 33rpx;
+	
+  border: 3rpx solid #faca82;
+  border-radius: 10rpx;
+}
+.btn-js{
+	/* display: inline; */
+  /* position: relative; */
+	float:right;
+	right: 200rpx;
+	top: -66rpx;
+
+}
+.biaoti{
+	 font-size: 30rpx;
+	 margin-left: 20rpx;
+	 color: darkgreen;
+}
+.hsqd-part2{
+	display: flex;
+}
+/* 定积分大盒子 */
+.djf-part2{
+	display: flex;
+}
+/* 极限大盒子 */
+.jx-part2{
+	display:flex;
+}
+
+.btn-js-hsqd{
+	display: inline;
+}
+/* 定积分按钮 */
+.btn-js-djf{
+	display: inline;
+}
+/* 极限按钮 */
+.btn-js-jx{
+	display: inline;
+}
+
+.ysfj-part2{
+	display: flex;    /*设置显示样式**/
+    align-items: center;    /**子view垂直居中*/
+    vertical-align: center; /**垂直居中*/
+    justify-content: center; /**内容居中*/
+    flex-direction:row; /**子view排列方式row--水平 column--垂直*/
+}
+/* 化简 */
+.hj-part2{
+	display: flex;    /*设置显示样式**/
+    align-items: center;    /**子view垂直居中*/
+    vertical-align: center; /**垂直居中*/
+    justify-content: center; /**内容居中*/
+    flex-direction:row; /**子view排列方式row--水平 column--垂直*/
+}
+/* 表达式化简 */
+.jx-part2{
+	display: flex;    /*设置显示样式**/
+    align-items: center;    /**子view垂直居中*/
+    vertical-align: center; /**垂直居中*/
+    justify-content: center; /**内容居中*/
+    flex-direction:row; /**子view排列方式row--水平 column--垂直*/
+}
+
+
+/* 结果模块 */
+.result-title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	margin-top: 20rpx;
+	color:darkgreen;
+}
+.result1{
+	display:flex;
+	/* align-content: center;
+	align-items: center;
+	justify-content: center; */
+	margin-top:50rpx;
+}
+
+.ans-img{
+	/* width: 1000%; */
+	height: 200rpx;
+}
+.scroll_display {
+  width: 50%;
+  height: 20rpx;
+  font-size: 35rpx;
+  vertical-align: middle;
+	padding-left: 60rpx;
+	color: darkgreen;
+}
+
+.fd-img{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
